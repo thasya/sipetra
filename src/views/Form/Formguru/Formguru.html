@@ -1,0 +1,117 @@
+
+		<div class="right" style="height: 120%;">
+
+			<div class="header">
+				<h1 class="hallo" v-on:click="$router.replace('/tableguru')"><i class="fa fa-chevron-left" style="margin-right: 0.5em; color: white;"></i>Form G01</h1>
+				<div class="profileContainer">
+					<img class="circleImage">
+					<p><b>Anasthasia Rawung</b></p>
+				</div>
+			</div>
+			
+			<div class="garistepi">
+
+				<div class="gurupilihan">
+					
+					<h2 style="text-align: left;margin-top: -5px;">Form Guru</h2>
+
+					<!-- TAHUN -->
+					<div class="inputSection">
+						<p>TAHUN</p>
+						<select name="tahun" v-model="tahun">
+							<option disabled selected title="Tahun">Tahun</option>
+							<option>2000</option>
+							<option>2001</option>
+							<option>2002</option>
+							<option>2003</option>
+							<option>2004</option>
+							<option>2005</option>
+							<option>2006</option>
+							<option>2007</option>
+							<option>2008</option>
+							<option>2009</option>
+							<option>2010</option>
+						</select>
+					</div>
+
+					<!-- KABUPATEN -->
+					<div class="inputSection">	
+						<p>KABUPATEN SULUT</p>
+						<select name="kab" v-model="kab">
+							<option disabled selected title="Pilih Kabupaten">Pilih Kabupaten</option>
+							<option v-for="item in list_kab">{{item.id_kabsulut}} | {{item.nama_kabsulut}}</option>
+						</select><br>
+					</div>
+
+					<!-- UPT -->
+					<div class="inputSection">
+						<p><b>UPT</b></p>
+						<select name="upt" v-model="upt">
+							<option disabled selected title="Pilih Kabupaten">Pilih UPT</option>
+							<option v-for="data in list_upt" 
+							v-if="kab[0] == data.id_kabsulut[0] && kab[1] == data.id_kabsulut[1] && kab[2] == data.id_kabsulut[2] && kab[3] == data.id_kabsulut[3]"> {{data.nama_upt}}</option>
+						</select><br>
+					</div>
+
+					<!-- Tingkat Pendidikan -->
+					<div class="inputSection">
+						<p><b>TINGKAT PENDIDIKAN</b></p>
+						<select name="tkt_pend" v-model="tkt_pend">
+							<option>TK</option>
+							<option>SD</option>
+							<option>SMP</option>
+						</select>
+					</div>
+
+					<!-- Jumlah PNS -->
+					<div class="inputSection">
+						<p><b>JUMLAH PNS</b></p>
+						<input type="number" v-model="jlh_pns">
+					</div>
+
+					<!-- Jumlah Honor -->
+					<div class="inputSection">
+						<p><b>JUMLAH HONOR</b></p>
+						<input type="number" v-model="jlh_honor"><br><br>
+					</div>
+
+					<button  v-on:click="tambahdata">TAMBAH</button><br><br>
+
+				</div>
+				
+				<div style="width: 75%;position: relative; margin-top: -500px; margin-left: 300px;margin-bottom: 90px;">
+
+					<button class="button_univ primary" style="position: absolute; right: 0"><i class="fa fa-save" style="margin-right: 0.3em"></i> <b>SIMPAN PERUBAHAN</b></button>	
+
+					<p style="margin-left: 0px;font-weight: bold;">Tabel Data Sementara</p>
+
+					<table class="ui celled table" style="margin-top: 40px;">
+
+						<thead>
+						    <tr>
+						    	<th>Tingkat Pendidikan</th>
+						    	<th>PNS</th>
+						    	<th>Honor</th>
+						    	<th>Jumlah</th>
+						  	</tr>
+						</thead>
+
+					  	<tbody>
+						    <tr v-for="listdata in list_data">
+						      <td data-label="Tingkat Pendidikan">{{listdata.tkt_pend}}</td>
+						      <td data-label="PNS">{{listdata.pns}}</td>
+						      <td data-label="Honor">{{listdata.honor}}</td>
+						      <td data-label="Jumlah">{{listdata.jumlah}}</td>
+						    </tr>
+						    <tr v-if="list_data.length <= 0">
+						    	<td>Tidak ada data</td>
+						    </tr>
+					  	</tbody>
+
+					</table>
+
+				</div>
+
+			</div>	
+			
+		</div>

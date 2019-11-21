@@ -1,0 +1,131 @@
+
+		<div class="right" style="height: 120%;">
+
+			<div class="header">
+				<h1 class="hallo" v-on:click="$router.replace('/tablependidikan')"><i class="fa fa-chevron-left" style="margin-right: 0.5em; color: white;"></i>Form P01</h1>
+				<div class="profileContainer">
+					<img class="circleImage">
+					<p><b>Anasthasia Rawung</b></p>
+				</div>
+			</div>
+			
+			<div class="garistepi">
+
+				<div class="gurupilihan">
+					
+					<h2 style="text-align: left;margin-top: -5px;">Form Pendidikan</h2>
+
+					<!-- TAHUN -->
+					<div class="inputSection">
+						<p>TAHUN</p>
+						<select name="tahun" v-model="tahun">
+							<option disabled selected title="Pilih Tahun">Pilih Tahun</option>
+							<option v-for="item in list_tahun">{{item.nama_tahun}}</option>
+						</select>
+					</div>
+
+					<!-- KABUPATEN -->
+					<div class="inputSection">	
+						<p>KABUPATEN SULUT</p>
+						<select name="kab" v-model="kab">
+							<option disabled selected title="Pilih Kabupaten">Pilih Kabupaten</option>
+							<option v-for="item in list_kab">{{item.id_kabsulut}} | {{item.nama_kabsulut}}</option>
+						</select><br>
+					</div>
+
+					<!-- UPT -->
+					<div class="inputSection">
+						<p><b>UPT</b></p>
+						<select name="upt" v-model="upt">
+							<option disabled selected title="Pilih Kabupaten">Pilih UPT</option>
+							<option v-for="data in list_upt" 
+							v-if="kab[0] == data.id_kabsulut[0] && kab[1] == data.id_kabsulut[1] && kab[2] == data.id_kabsulut[2] && kab[3] == data.id_kabsulut[3]"> {{data.nama_upt}}</option>
+						</select><br>
+					</div>
+
+					<!-- Tingkat Pendidikan -->
+					<div class="inputSection">
+						<p><b>TINGKAT PENDIDIKAN</b></p>
+						<select name="tkt_pend" v-model="tkt_pend">
+							<option>SD</option>
+							<option>SMP</option>
+						</select>
+					</div>
+
+					<!-- Jumlah Murid -->
+					<div class="inputSection">
+						<p><b>JUMLAH MURID</b></p>
+						<input type="number" v-model="jlh_murid">
+					</div>
+
+					<!-- Jumlah Unit1 -->
+					<div class="inputSection">
+						<p><b>JUMLAH GEDUNG UNIT 1</b></p>
+						<input type="number" v-model="jlh_unit1">
+					</div>
+
+					<!-- Jumlah Lokal1 -->
+					<div class="inputSection">
+						<p><b>JUMLAH GEDUNG LOKAL 1</b></p>
+						<input type="number" v-model="jlh_lokal1"><br><br>
+					</div>
+
+					<!-- Jumlah Unit2 -->
+					<div class="inputSection">
+						<p><b>JUMLAH GEDUNG UNIT 2</b></p>
+						<input type="number" v-model="jlh_unit2">
+					</div>
+
+					<!-- Jumlah Lokal2 -->
+					<div class="inputSection">
+						<p><b>JUMLAH GEDUNG LOKAL 2</b></p>
+						<input type="number" v-model="jlh_lokal2"><br><br>
+					</div>
+
+					<button  v-on:click="tambahdata">TAMBAH</button><br><br>
+
+				</div>
+				
+				<div style="width: 75%;position: relative; margin-top: -710px; margin-left: 300px;margin-bottom: 90px;">
+
+					<p style="margin-left: 0px;font-weight: bold;">Tabel Data Sementara</p>
+					<form @submit.prevent="addPackage">
+							<button type="submit" v-model="category_fix" class="button_univ primary" style="position: absolute; right: 0"><i class="fa fa-save" style="margin-right: 0.3em"></i> <b>SIMPAN PERUBAHAN</b></button>
+						<table class="ui celled table" style="margin-top: 40px; text-align: center;">
+
+							<thead>
+							    <tr>
+							    	<th rowspan="2">Tingkat Pendidikan</th>
+							    	<th rowspan="2">Jumlah Murid</th>
+							    	<th colspan="4">Gedung</th>
+							  	</tr>
+							  	<tr>
+							    	<th>Unit 1</th>
+							    	<th>Lokal 1</th>
+							    	<th>Unit 2</th>
+							    	<th>Lokal 2</th>
+							  	</tr>
+							</thead>
+
+						  	<tbody>
+							    <tr v-for="listdata in list_data">
+							      <td data-label="Tingkat Pendidikan">{{listdata.tkt_pend}}</td>
+							      <td data-label="murid">{{listdata.murid}}</td>
+							      <td data-label="Unit1">{{listdata.unit1}}</td>
+							      <td data-label="lokal1">{{listdata.lokal1}}</td>
+							      <td data-label="unit2">{{listdata.unit2}}</td>
+							      <td data-label="lokal2">{{listdata.lokal2}}</td>
+							    </tr>
+							    <tr v-if="list_data.length <= 0">
+							    	<td>Tidak ada data</td>
+							    </tr>
+						  	</tbody>
+
+						</table>
+					</form>	
+
+				</div>
+
+			</div>	
+			
+		</div>

@@ -1,0 +1,72 @@
+<div class="right">
+
+	<div class="header">
+				
+		<h1 v-on:click="$router.replace('/masterdata')"><i class="fa fa-chevron-left" style="margin-right: 0.5em; color: white;"></i>Tabel Tenaga Guru di UPT</h1>
+
+				<div class="profileContainer">
+					<img class="circleImage">
+					<p><b>Anasthasia Rawung</b></p>
+				</div>
+
+			</div>
+			
+			<div style="margin-left: 40px;margin-top: 40px;display: flex;position: relative;width: 90%;margin-bottom: 30px;">
+
+				<button class="button_univ danger"><i class="fa fa-print" style="margin-right: 0.3em"></i> <b>CETAK</b></button>
+
+				<button class="button_univ primary"><i class="fa fa-file-excel" style="margin-right: 0.3em"></i> <b>EXPORT KE EXCEL</b></button>
+
+				<a href="../FORM/formGuru.php"><button class="button_univ info"><i class="fa fa-plus" style="margin-right: 0.3em"></i> <b>TAMBAH</b></button></a>
+
+				
+				<div style="display: flex;position: absolute;right: 0;margin-top: 10px;">
+					<select style="width: 90px;border-radius: 3px;margin-right: 10px;">
+						<option selected disabled>Tahun</option>
+						<option>2000</option>
+						<option>2001</option>
+						<option>2002</option>
+						<option>2003</option>
+						<option>2004</option>
+						<option>2005</option>
+						<option>2006</option>
+						<option>2007</option>
+						<option>2008</option>
+					</select>
+
+  					<input class="search" type="text" placeholder="Cari..." required>
+
+ 					<button><i class="fa fa-search" style="margin-right: 0.3em"></i></button>
+
+				</div>
+
+			</div>
+
+			<table style="width: 90%; margin-left: 40px; text-align: center; font-size: 12px;" class="ui celled table">
+			  <thead>
+			    <tr>
+			    	<th rowspan="2">NO</th>
+					<th rowspan="2">KABUPATEN/UPT</th>
+					<th rowspan="2">KECAMATAN</th>
+					<th rowspan="2">NAMA DESA BARU</th>
+					<th rowspan="2">TAHUN PENEMPATAN</th>
+					<th rowspan="2">TAHUN PENYERAHAN</th>
+					<th rowspan="2">DAERAH ASAL</th>
+					<th colspan="2">JUMLAH SAAT PENEMPATAN</th>
+					<th colspan="2">JUMLAH SAAT PENYERAHAN</th>
+            		<th rowspan="2">KET.</th>	
+			  	</tr>
+        		<tr>
+        			<th>KK</th>
+        			<th>JIWA</th>
+        			<th>KK</th>
+        			<th>JIWA</th>
+        		</tr>
+			 </thead>
+
+			 <tbody>
+			 
+			 </tbody>
+			</table>
+
+</div>

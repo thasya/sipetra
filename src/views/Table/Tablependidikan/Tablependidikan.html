@@ -1,0 +1,91 @@
+<div class="right">
+
+	<div class="header">
+				
+		<h1 v-on:click="$router.replace('/masterdata')"><i class="fa fa-chevron-left" style="margin-right: 0.5em; color: white;"></i>Tabel Tenaga Guru di UPT</h1>
+
+				<div class="profileContainer">
+					<img class="circleImage">
+					<p><b>Anasthasia Rawung</b></p>
+				</div>
+
+			</div>	
+			
+			<div style="margin-left: 40px;margin-top: 40px;display: flex;position: relative;width: 90%;margin-bottom: 30px;">
+
+				<a target="_BLANK"><button v-on:click="$router.replace('/cetak')"  class="button_univ danger"><i class="fa fa-print" style="margin-right: 0.3em"></i> <b>CETAK</b></button></a>
+
+				<button v-on:click="$router.replace('/export')" class="button_univ primary"><i class="fa fa-file-excel" style="margin-right: 0.3em"></i> <b>EXPORT KE EXCEL</b></button>
+
+				<button class="button_univ info" v-on:click="$router.replace('/formpendidikan')"><i class="fa fa-plus" style="margin-right: 0.3em"></i> <b>TAMBAH</b></button>
+
+				
+				<div style="display: flex;position: absolute;right: 0;margin-top: 10px;">
+					<select name="tahun" v-model="tahun" style="width: 120px;border-radius: 3px;margin-right: 10px;">
+						<option disabled selected title="Pilih Tahun">Pilih Tahun</option>
+						<option selected>SEMUA TAHUN</option>
+						<option v-for="item in list_tahun">{{item.nama_tahun}}</option>
+					</select>
+				<form>
+					<select v-model="search_selector">
+						<option>NAMA KABUPATEN</option>
+						<option>NAMA UPT</option>
+					</select>
+  					<input class="search" v-model="search_holder" type="text" placeholder="Cari..." autocomplete="off" required>
+
+ 				</form>
+
+				</div>
+
+			</div>
+
+			<table style="width: 90%; margin-left: 40px; text-align: center; font-size: 12px;" class="ui celled table">
+			  <thead>
+			    <tr>
+						<th rowspan="3">NO</th>
+						<th rowspan="3">KABUPATEN/UPT</th>
+            			<th colspan="5">SEKOLAH DASAR</th>
+            			<th colspan="3">SEKOLAH MENENGAH PERTAMA</th>
+            			<th rowspan="3">KET.</th>	
+            			<th rowspan="3">OPSI</th>
+					</tr>
+
+					<tr>`
+            			<th colspan="4">GEDUNG</th>
+            			<th rowspan="2">JUMLAH MURID</th>
+            			<th colspan="2">GEDUNG</th>
+            			<th rowspan="2">JUMLAH MURID</th>
+        			</tr>
+
+        			<tr>
+        				<th>UNIT I</th>
+        				<th>LOKAL I</th>
+        				<th>UNIT II</th>
+        				<th>LOKAL II</th>
+        				<th>UNIT</th>
+        				<th>LOKAL</th>
+        			</tr>
+			 </thead>
+
+			 <tbody>
+			 	<tr v-for="data in filteredData" v-if="data.nama_tahun == tahun || tahun == 'SEMUA TAHUN' ">
+					<td>{{ data.id_gedung_pendidikan }}</td>
+					<td>{{ data.nama_kabsulut }} | {{ data.nama_upt }}</td>
+			 		<td>{{ data.unit1_sd }}</td>
+			 		<td>{{ data.lokal1_sd }}</td>
+			 		<td>{{ data.unit2_sd }}</td>
+			 		<td>{{ data.lokal2_sd }}</td>
+			 		<td>{{ data.jumlah_murid_sd }}</td>
+			 		<td>{{ data.unit_smp }}</td>
+			 		<td>{{ data.lokal_smp }}</td>
+			 		<td>{{ data.jumlah_murid_smp }}</td>
+			 		<td>{{ data.keterangan }}</td>
+			 		<td>
+			 			<button class="button_univ primary"><i class="fa fa-edit" style="margin-right: 0.2em"></i>EDIT</button>
+			 			<button class="button_univ danger"><i class="fa fa-trash-alt" style="margin-right: 0.2em"></i>HAPUS</button>
+			 		</td>
+			 	</tr>
+			 </tbody>
+			</table>
+
+</div>

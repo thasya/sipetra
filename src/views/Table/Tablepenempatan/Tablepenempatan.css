@@ -1,0 +1,63 @@
+.right{
+	width: 100%;
+}
+
+.profileContainer{
+	position: absolute;
+	display: flex;
+	top: 0;
+	right: 40px;
+	padding-top: 10px;
+}
+
+.circleImage{
+	width: 35px;
+	height: 35px;
+	border-radius: 100%;
+	margin-top: 5px;
+	margin-right: 15px;
+}
+
+.tabelguru th{
+	color: #000000;
+	background-color: #B3B7DB;
+}
+
+.tabelguru table{
+	width: 90%;
+	margin-top: 1px;
+	margin-left: 40px;
+}
+
+.header h1{
+	font-size: 18px;
+	padding-top: 25px;
+	margin-left: 30px;
+}
+
+.kembali {
+	font-size: 15px;
+	margin-top: -3px;
+}
+
+.search {
+    padding:8px 15px;
+    background:rgba(50, 50, 50, 0.2);
+    border:0px solid #dbdbdb;
+    
+}
+
+.cari {
+    position:relative;
+    padding:6px 15px;
+    left:-8px;
+    border:2px solid #004788;
+    background-color: #004788;
+    color:#fafafa;
+}
+
+
+.tombolTambah {
+	margin-left: 995px;
+	margin-top: 50px;
+}

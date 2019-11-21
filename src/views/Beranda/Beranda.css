@@ -1,0 +1,157 @@
+.logo{
+	width: 60px;
+	height: 60px;
+	margin-left: 80px;
+	margin-top: 20px;
+}
+
+.div1{
+	text-align: left;
+	color: white;
+	background-color: #004788;
+	margin-top: 15px;
+	font-size: 8px;
+	margin-left: 23px;
+}
+
+.div1 p{
+	font-size: 10px;
+	line-height: 15px;
+}
+
+.div1 h4{
+	font-size: 12px;
+	width: 214px;
+	height: 50px;
+	margin-left: -23px;
+	line-height: 50px;
+	padding-left: 20px;
+	margin-bottom: -16px;
+	font-family: 'Calibri';
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+
+.active{
+	background-color: orange;
+	color: #000;
+}
+
+.div1 h4:hover{
+	opacity: 0.6;
+	background-color: #0d0d0d;
+	color: #fff;
+	cursor: pointer;
+}
+
+.dinasberanda{
+	text-align: left;
+	color: white;
+	font-size: 15px;
+}
+
+.sipetra{
+	text-align: left;
+	color: orange;
+	margin-top: 15px;
+	margin-left: 65px;
+}
+
+.div3{
+	display: flex;
+	font-family: "Calibri";
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	margin-top: -10px;
+}
+
+.left{
+	background-color: #004788;
+	width: 280px;
+	margin-left: -8px;
+}
+
+.button{
+	width: 150px;
+	border: none;
+	height: 40px;
+	background-color: orange;
+	color: black;
+	font-weight: bold;
+	font-family: "Calibri";
+	border-radius: 20px;
+	margin-top: 15px;
+	bottom: 20px;
+	font-weight: bold;
+	position: absolute;
+	margin-left: 17px;
+	transition: all 0.4s ease;
+	cursor: pointer;
+}
+
+.button:hover{
+	opacity: 0.6;
+	transform: scale(1.03);
+}
+	
+body{
+	background-color: #B3B7DB;
+}
+
+.header{
+	background-color: #0C172B;
+	color: white;
+	height: 75px;
+	width: 100%;
+	margin-top: -10px;
+	position: relative;
+}
+
+.right{
+	width: 100%;
+}
+
+.hallo{
+	margin-left: 10px;
+	margin-bottom: 40px;
+	font-size: 14px;
+	line-height: 19px;
+	padding-top: 18px;
+	margin-left: 30px;
+}
+
+.peta{
+	width: 400px;
+	height: 300px;
+	margin-top: 80px;
+	margin-left: 30px;
+}
+
+.profileContainer{
+	position: absolute;
+	display: flex;
+	top: 0;
+	right: 40px;
+	padding-top: 10px;
+}
+
+.circleImage{
+	width: 35px;
+	height: 35px;
+	border-radius: 100%;
+	margin-top: 5px;
+	margin-right: 15px;
+}
+
+.heading{
+	margin-top: 40px; 
+	color: #000;
+}
+
+.paragraph{
+	width: 470px;
+	margin-right: 60px;
+	text-align: justify;
+	color: #000
+}

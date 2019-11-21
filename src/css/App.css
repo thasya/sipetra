@@ -1,0 +1,308 @@
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+.logo{
+  width: 60px;
+  height: 60px;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+.div1{
+  text-align: left;
+  color: white;
+  background-color: #004788;
+  margin-top: 15px;
+  font-size: 8px;
+  margin-left: 23px;
+}
+
+.div1 p{
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.div1 h4{
+  font-size: 12px;
+  width: 214px;
+  height: 50px;
+  margin-left: -23px;
+  line-height: 50px;
+  padding-left: 20px;
+  margin-bottom: -16px;
+  font-family: 'Calibri';
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.active{
+  background-color: orange;
+  color: #000;
+}
+
+.div1 h4:hover{
+  opacity: 0.6;
+  background-color: #0d0d0d;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dinasberanda{
+  text-align: left;
+  color: white;
+  font-size: 15px;
+}
+
+.sipetra{
+  text-align: left;
+  color: orange;
+  margin-top: 15px;
+  margin-left: 65px;
+}
+
+.div3{
+  display: flex;
+  font-family: "Calibri";
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.left{
+  background-color: #004788;
+  width: 234px;
+  margin-left: -8px;
+  margin-top: -8px;
+  height: 100vh;
+  position: fixed;
+}
+
+.button{
+  width: 150px;
+  border: none;
+  height: 40px;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  font-family: "Calibri";
+  border-radius: 20px;
+  margin-top: 15px;
+  bottom: 20px;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 17px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.button1{
+  width: 150px;
+  border: none;
+  height: 40px;
+  background-color: #004788;
+  color: white;
+  font-weight: bold;
+  font-family: "Calibri";
+  margin-top: 50px;
+  bottom: 250px;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 17px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.button2{
+  width: 150px;
+  border: none;
+  height: 40px;
+  background-color: #004788;
+  color: orange;
+  font-weight: bold;
+  font-family: "Calibri";
+  border-radius: 10px;
+  margin-top: 90px;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 17px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.button1:hover{
+  opacity: 0.6;
+  transform: scale(1.03);
+
+}
+
+.button2:hover{
+  opacity: 0.6;
+  transform: scale(1.03);
+
+}
+
+.button:hover{
+  opacity: 0.6;
+  transform: scale(1.03);
+}
+
+.header{
+  background-color: #0C172B;
+  color: white;
+  height: 75px;
+  width: 100%;
+  margin-top: -10px;
+  position: relative;
+}
+
+.right{
+  width: 100%;
+}
+
+.hallo{
+  margin-left: 10px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 19px;
+  padding-top: 18px;
+  margin-left: 30px;
+}
+
+.peta{
+  width: 400px;
+  height: 300px;
+  margin-top: 80px;
+  margin-left: 30px;
+}
+
+.profileContainer{
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 40px;
+  padding-top: 10px;
+}
+
+.circleImage{
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+
+.heading{
+  margin-top: 40px; 
+  color: #000;
+}
+
+.paragraph{
+  width: 470px;
+  margin-right: 60px;
+  text-align: justify;
+  color: #000;
+}
+
+.tabel{
+  margin: 80px 80px 80px 80px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 85%;
+}
+
+table a{
+  color: #000;
+}
+
+.tabel table tr td{
+  transition: all 0.4s ease;
+}
+
+.tabel table tr td:hover{
+  opacity:1;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.tabelguru th{
+  color: #000000;
+  background-color: #B3B7DB;
+}
+
+.tabelguru table{
+  width: 90%;
+  margin-top: 1px;
+  margin-left: 40px;
+}
+
+.header h1{
+  font-size: 18px;
+  padding-top: 25px;
+  margin-left: 30px;
+}
+
+.kembali {
+  font-size: 15px;
+  margin-top: -3px;
+}
+
+.search {
+    padding:8px 15px;
+    background:rgba(50, 50, 50, 0.2);
+    border:0px solid #dbdbdb;
+}
+
+.cari {
+    position:relative;
+    padding:6px 15px;
+    left:-8px;
+    border:2px solid #004788;
+    background-color: #004788;
+    color:#fafafa;
+}
+
+
+.tombolTambah {
+  margin-left: 995px;
+  margin-top: 50px;
+}
+.button_univ{
+  margin-top: 5px;
+  font-weight: bold;
+  width: auto;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-left: 5px;
+  border: none;
+  font-family: "Calibri";
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button_univ:hover{
+  transform: scale(1.02);
+  opacity: 0.6;
+}
+
+.danger{
+  color: #fff;
+  background-color: #e74c3c;
+}
+
+.primary{
+  color: #fff;
+  background-color: #27ae60;
+}
+
+.info{
+  color: #fff;
+  background-color: #2980b9;
+}

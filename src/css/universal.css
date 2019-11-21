@@ -1,0 +1,37 @@
+body{
+	background-color: #ececec;
+}
+
+.button_univ{
+	margin-top: 5px;
+	font-weight: bold;
+	width: auto;
+	padding: 10px 15px;
+	border-radius: 5px;
+	margin-left: 5px;
+	border: none;
+	font-family: "Calibri";
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.button_univ:hover{
+	transform: scale(1.02);
+	opacity: 0.6;
+}
+
+.danger{
+	color: #fff;
+	background-color: #e74c3c;
+}
+
+.primary{
+	color: #fff;
+	background-color: #27ae60;
+}
+
+.info{
+	color: #fff;
+	background-color: #2980b9;
+}
